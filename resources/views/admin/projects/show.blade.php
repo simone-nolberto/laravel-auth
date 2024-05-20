@@ -14,7 +14,7 @@
         <div class="row row-cols-1 row-cols-md-2 g-4">
             <div class="col">
                 <img class="card-img-top" src="{{ $project->cover_image }}"
-                    alt="image describing the following{{ $project->project_title }}">
+                    alt="">
             </div>
             <div class="col">
 

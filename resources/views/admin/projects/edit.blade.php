@@ -28,9 +28,10 @@
         @endif
 
 
-        <form action="{{ route('admin.projects.store') }}" method="post">
+        <form action="{{ route('admin.projects.update', $project) }}" method="post">
 
             @csrf
+            @method('PUT')
 
 
             <div class="mb-3">
@@ -96,7 +97,7 @@
 
 
             <button type="submit" class="btn btn-primary">
-                Invia
+                Update
             </button>
 
 

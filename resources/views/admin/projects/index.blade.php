@@ -44,7 +44,7 @@
 
                                 <button type="button" class="btn btn-danger" data-bs-toggle="modal"
                                     data-bs-target="#modalId-{{ $project->id }}">
-                                    DELETE
+                                    Delete
                                 </button>
 
                                 <!-- Modal Body -->
@@ -90,12 +90,6 @@
                         </tr>
 
                     @empty
-
-                        <tr class="">
-                            <td scope="row">Item</td>
-                            <td>Item</td>
-                            <td>Item</td>
-                        </tr>
                     @endforelse
 
                 </tbody>
