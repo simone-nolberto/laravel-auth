@@ -6,7 +6,7 @@
         <div class="container d-flex justify-content-between align-items-center">
             <h1>Projects</h1>
 
-            <a class="btn btn-primary" href="{{route('admin.projects.create')}}">Add</a>
+            <a class="btn btn-primary" href="{{ route('admin.projects.create') }}">Add</a>
         </div>
 
     </header>
@@ -28,7 +28,6 @@
                 </thead>
                 <tbody>
                     @forelse ($projects as $project)
-
                         <tr class="">
                             <td scope="row">{{ $project->id }}</td>
                             <td>
@@ -39,9 +38,11 @@
                             <td>{{ $project->slug }}</td>
                             <td>
 
-                                <a class="btn btn-dark" href="{{route('admin.projects.show', $project)}}">View</a>
+                                <a class="btn btn-dark" href="{{ route('admin.projects.show', $project) }}">View</a>
 
-                                /edit/delete
+                                <a class="btn btn-dark" href="{{ route('admin.projects.edit', $project) }}">Edit</a>
+
+                                /delete
 
                             </td>
 
