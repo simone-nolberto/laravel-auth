@@ -6,7 +6,7 @@
         <div class="container d-flex justify-content-between align-items-center">
             <h1>Projects</h1>
 
-            {{-- <a class="btn btn-primary" href="{{route('admin.projects.create')}}">Add</a> --}}
+            <a class="btn btn-primary" href="{{route('admin.projects.create')}}">Add</a>
         </div>
 
     </header>
