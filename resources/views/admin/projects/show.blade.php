@@ -13,18 +13,17 @@
     <div class="container py-5">
         <div class="row row-cols-1 row-cols-md-2 g-4">
             <div class="col">
-                <img class="card-img-top" src="{{ $project->cover_image }}"
-                    alt="">
+                <img class="card-img-top" src="{{ $project->cover_image }}" alt="">
             </div>
             <div class="col">
 
                 <div class="container my-5 d-flex justify-content-between">
                     <a class="btn btn-primary" href="{{ route('admin.projects.edit', $project) }}"><i
-                            class="fa-solid fa-pen"></i>EDIT</a>
+                            class="fa-solid fa-pen"></i></a>
                     <!-- Modal trigger button -->
                     <button type="button" class="btn btn-danger" data-bs-toggle="modal"
                         data-bs-target="#modalId-{{ $project->id }}">
-                        DELETE
+                        <i class="fa-solid fa-trash"></i>
                     </button>
 
                     <!-- Modal Body -->
@@ -45,7 +44,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                                        Close
+                                        <i class="fa-solid fa-xmark"></i>
                                     </button>
                                     <form action="{{ route('admin.projects.destroy', $project) }}" method="post">
                                         @csrf
@@ -53,7 +52,7 @@
                                         @method('DELETE')
 
                                         <button type="submit" class="btn btn-danger">
-                                            <i class="fa-solid fa-trash">DELETE</i>
+                                            <i class="fa-solid fa-trash"></i>
                                         </button>
 
                                     </form>

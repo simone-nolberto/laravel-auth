@@ -14,6 +14,8 @@
 
     <div class="container py-5">
 
+        @include('partials.session-message')
+
         <div class="table-responsive">
             <table class="table table-light">
                 <thead>
@@ -38,13 +40,15 @@
                             <td>{{ $project->slug }}</td>
                             <td>
 
-                                <a class="btn btn-dark" href="{{ route('admin.projects.show', $project) }}">View</a>
+                                <a class="btn btn-dark" href="{{ route('admin.projects.show', $project) }}"><i
+                                        class="fa-solid fa-eye"></i></a>
 
-                                <a class="btn btn-dark" href="{{ route('admin.projects.edit', $project) }}">Edit</a>
+                                <a class="btn btn-dark" href="{{ route('admin.projects.edit', $project) }}"><i
+                                        class="fa-solid fa-pen"></i></a>
 
                                 <button type="button" class="btn btn-danger" data-bs-toggle="modal"
                                     data-bs-target="#modalId-{{ $project->id }}">
-                                    Delete
+                                    <i class="fa-solid fa-trash"></i>
                                 </button>
 
                                 <!-- Modal Body -->
@@ -67,7 +71,8 @@
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                                                    Close
+                                                    <i class="fa-solid fa-xmark"></i>
+
                                                 </button>
                                                 <form action="{{ route('admin.projects.destroy', $project) }}"
                                                     method="post">
@@ -76,7 +81,7 @@
                                                     @method('DELETE')
 
                                                     <button type="submit" class="btn btn-danger">
-                                                        <i class="fa-solid fa-trash">Delete</i>
+                                                        <i class="fa-solid fa-trash"></i>
                                                     </button>
 
                                                 </form>
