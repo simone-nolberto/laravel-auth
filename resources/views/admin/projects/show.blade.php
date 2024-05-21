@@ -63,6 +63,7 @@
                 </div>
 
                 <div class="card">
+
                     <div class="card-body bg-white">
                         <h2 class="card-title"> {{ $project->title }} </h2>
                         <p class="card-text">
@@ -74,10 +75,17 @@
                         <span><strong>Author:{{ $project->author }} </strong></span>
                         <span><strong>Created at:{{ $project->created_at }} </strong></span>
                     </div>
+
                 </div>
 
             </div>
 
+
+
+            <div class="container d-flex justify-content-between my-5">
+                <span><strong>Click here for the GitHub repo:{{ $project->source_code }} </strong></span>
+                <span><strong>Click here to visit the actual site:{{ $project->site_link }} </strong></span>
+            </div>
         </div>
     </div>
 @endsection

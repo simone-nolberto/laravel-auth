@@ -69,6 +69,38 @@
             </div>
 
 
+
+            <div class="mb-3">
+                <label for="source_code" class="form-label">Source Code</label>
+                <input type="text" class="form-control" name="source_code" id="source_code"
+                    aria-describedby="source_codeHelper" placeholder="Your post source_code" />
+                <small id="helpId" class="form-text text-muted">Add a link to your GitHub here</small>
+
+                @error('source_code')
+                    <div class="text-dange py-2">
+
+                        {{ $message }}
+                    </div>
+                @enderror
+            </div>
+
+
+
+            <div class="mb-3">
+                <label for="site_link" class="form-label">Site Link</label>
+                <input type="text" class="form-control" name="site_link" id="site_link"
+                    aria-describedby="site_linkHelper" placeholder="Your post site_link" />
+                <small id="helpId" class="form-text text-muted">Add the link to your site here</small>
+
+                @error('site_link')
+                    <div class="text-dange py-2">
+
+                        {{ $message }}
+                    </div>
+                @enderror
+            </div>
+
+
             <div class="mb-3">
                 <label for="description" class="form-label"></label>
                 <textarea class="form-control" name="description" id="description" rows="5">{{ $project->description }}</textarea>
