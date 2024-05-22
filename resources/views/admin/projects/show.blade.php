@@ -8,7 +8,7 @@
         </div>
 
     </header>
-    
+
 
     <div class="container py-5">
         <div class="row row-cols-1 row-cols-md-2 g-4">
@@ -76,8 +76,8 @@
                     </div>
 
                     <div class="card-footer d-flex justify-content-between">
-                        <span><strong>Author:{{ $project->author }} </strong></span>
-                        <span><strong>Created at:{{ $project->created_at }} </strong></span>
+                        <span><strong>Author: </strong>{{ $project->author }}</span>
+                        <span><strong>Created at: </strong>{{ $project->created_at }}</span>
                     </div>
 
                 </div>
@@ -87,8 +87,8 @@
 
 
             <div class="container d-flex justify-content-between my-5">
-                <span><strong>Click here for the GitHub repo:{{ $project->source_code }} </strong></span>
-                <span><strong>Click here to visit the actual site:{{ $project->site_link }} </strong></span>
+                <span><strong>Click here for the GitHub repo: </strong>{{ $project->source_code }}</span>
+                <span><strong>Click here to visit the actual site: </strong>{{ $project->site_link }}</span>
             </div>
         </div>
     </div>

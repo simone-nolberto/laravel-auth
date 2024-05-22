@@ -92,7 +92,7 @@ class ProjectController extends Controller
 
         $project->update($validated);
 
-        return to_route('admin.projects.index')->with('message', "Project $project->project_title successfully updated!");
+        return to_route('admin.projects.index')->with('message', "Project '$project->project_title' successfully updated!");
     }
 
     /**
@@ -107,6 +107,6 @@ class ProjectController extends Controller
 
         $project->delete();
 
-        return to_route('admin.projects.index')->with('message', "Project $project->project_title successfully deleted!");
+        return to_route('admin.projects.index')->with('message', "Project '$project->project_title' successfully deleted!");
     }
 }
