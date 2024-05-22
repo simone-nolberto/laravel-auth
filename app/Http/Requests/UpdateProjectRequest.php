@@ -25,7 +25,7 @@ class UpdateProjectRequest extends FormRequest
             'author' => 'required',
             'project_title' => 'required|min:5|max:150',
             'description' => 'nullable',
-            'cover_image' => 'nullable',
+            'cover_image' => 'nullable|image|max:500',
             'source_code' => 'nullable',
             'site_link' => 'nullable',
         ];

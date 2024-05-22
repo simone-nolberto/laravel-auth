@@ -8,12 +8,16 @@
         </div>
 
     </header>
-
+    
 
     <div class="container py-5">
         <div class="row row-cols-1 row-cols-md-2 g-4">
             <div class="col">
-                <img class="card-img-top" src="{{ $project->cover_image }}" alt="">
+                @if (Str::startsWith($project->cover_image, 'https://'))
+                    <img width="140" src="{{ $project->cover_image }}" alt="">
+                @else
+                    <img width="140" src="{{ asset('storage/' . $project->cover_image) }}" alt="">
+                @endif
             </div>
             <div class="col">
 

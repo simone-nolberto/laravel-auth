@@ -16,7 +16,7 @@
         @include('partials.validation-message')
 
 
-        <form action="{{ route('admin.projects.store') }}" method="post">
+        <form action="{{ route('admin.projects.store') }}" method="post" enctype="multipart/form-data">
 
             @csrf
 
@@ -38,9 +38,9 @@
 
             <div class="mb-3">
                 <label for="project_title" class="form-label">Project Title</label>
-                <input type="text" class="form-control" name="project_title" id="project_title" aria-describedby="project_titleHelper"
-                    placeholder="Your post project_title" />
-                <small id="helpId" class="form-text text-muted">Type the project_title of the your project</small>
+                <input type="text" class="form-control" name="project_title" id="project_title"
+                    aria-describedby="project_titleHelper" placeholder="Your post project_title" />
+                <small id="helpId" class="form-text text-muted">Type the title of the your project</small>
 
                 @error('project_title')
                     <div class="text-dange py-2">
@@ -54,7 +54,7 @@
 
             <div class="mb-3">
                 <label for="cover_image" class="form-label">cover_image</label>
-                <input type="text" class="form-control" name="cover_image" id="cover_image"
+                <input type="file" class="form-control" name="cover_image" id="cover_image"
                     aria-describedby="cover_imageHelper" placeholder="Your post cover_image" />
                 <small id="helpId" class="form-text text-muted">Add an image here</small>
 

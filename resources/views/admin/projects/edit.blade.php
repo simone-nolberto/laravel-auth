@@ -15,7 +15,7 @@
         @include('partials.validation-message')
 
 
-        <form action="{{ route('admin.projects.update', $project) }}" method="post">
+        <form action="{{ route('admin.projects.update', $project) }}" method="post" enctype="multipart/form-data">
 
             @csrf
             @method('PUT')
@@ -55,7 +55,7 @@
 
             <div class="mb-3">
                 <label for="cover_image" class="form-label">cover_image</label>
-                <input type="text" class="form-control" name="cover_image" id="cover_image"
+                <input type="file" class="form-control" name="cover_image" id="cover_image"
                     aria-describedby="cover_imageHelper" value="{{ $project->cover_image }}"
                     placeholder="Your post cover_image" />
                 <small id="helpId" class="form-text text-muted">Add an image here</small>
